@@ -29,13 +29,13 @@ def cxIfRev(qt_circuit, q1, q2, revs=0, md=0):
           revs - revs equals 0 if the changing of the gate direction is necessary;
 		  md - md equals 1 or 2 if one of the H gates applied to the second qubit is truncated.
 	'''
-    if revs==0:
+    if revs == 0:
         qt_circuit.h(q1)
-        if md!=2:
+        if md != 2:
             qt_circuit.h(q2)
         qt_circuit.cx(q2, q1)
         qt_circuit.h(q1)
-        if md!=1:
+        if md != 1:
             qt_circuit.h(q2)
     else:
         qt_circuit.cx(q1, q2)
