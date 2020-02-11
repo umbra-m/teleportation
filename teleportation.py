@@ -80,8 +80,8 @@ def telep(numq, qNum=5, revs=0, bellstate=0, barrs=False, HBase=False):
 			q_reg - quantum register;
 			c_reg - classical register.
 	'''
-	if qNum < 5:
-		qNum = 5
+   if qNum < 5:
+       qNum = 5
 	
     q_reg = QuantumRegister(qNum, 'q')
     c_reg = ClassicalRegister(qNum, 'c')
